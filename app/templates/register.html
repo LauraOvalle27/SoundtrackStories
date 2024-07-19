@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="width:70%; overflow:auto" class="w3-white w3-round-xxlarge w3-padding-large">
+    <div class="cointainer">       
+        <div class="col-sm-12">
+            <form method=POST action="/register/i"> 
+                <img src="../static/images/logo_soundtrack.png" class="logo-login">
+                <h1 class="login-title">Registrate</h1>
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <div class="mb-3">
+                                <label for="nameUser" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nameUser"
+                                     name="nameUser"  required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="lastName"
+                                     name="lastName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="nickName" class="form-label">Nickname</label>
+                            <input type="text" class="form-control" id="nickName"
+                                 name="nickName">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo</label>
+                            <input type="text" class="form-control" id="email"
+                                name="email">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="passwordUser" name="passwordUser">  
+                    </div>
+
+                <button type="submit" class="btn btn-login">Registrarse</button>
+                <br>
+                
+          </form>
+          {% if message %}
+          <div class="message">
+            <p>{{ message }}</p>
+          </div>
+          {% endif %}
+        </div>  
+    </div>     
+  </div>
+  {% endblock content %}

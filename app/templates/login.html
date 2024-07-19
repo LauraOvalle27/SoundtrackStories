@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="width:70%; overflow:auto" class="w3-white w3-round-xxlarge w3-padding-large">
+    <div class="cointainer">          
+      <div class="col-sm-12">
+          <form action="/login" method="POST">
+                <img src="../static/images/logo_soundtrack.png" class="logo-login">
+                <h1 class="login-title">Iniciar Sesión</h1>
+                <br>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electronico</label>
+                    <input type="text" class="form-control" id="email" aria-describedby="IdHelp" name="email">               
+                </div>
+                <div class="mb-3">
+                    <label for="passwordUser" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="passwordUser" name="passwordUser">  
+                </div>
+                <button type="submit" class="btn btn-login">Ingresar</button>
+                <br>
+                <div class="password">
+                    ¿Aún no tienes una cuenta?  <a class="nav-link " href="{{url_for('register')}}">registrate Aquí</a>
+                </div>
+          </form>
+        </div>  
+    </div> 
+    {% if message %}
+        <p class="message">{{ message }}</p>
+    {% endif %}    
+  </div>
+  {% endblock content %}

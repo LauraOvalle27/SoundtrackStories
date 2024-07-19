@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div>
+  <header>
+    <nav>
+      <div class="row">
+        <div class="col-sm-3" id="sidebar">
+          <img src="../static/images/logo_soundtrack.png" class="logo-bar">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link"  href="/feed">
+                <i class="bi bi-house-door-fill"></i> <span class="icon-text">Inicio</span>
+              </a>
+          </li>
+          <li class="nav-item active" aria-current="page">
+            <a class="nav-link" href="/post">
+              <i class="bi bi-plus-circle-fill"></i> <span class="icon-text">Crear</span>
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/profile">
+                <i class="bi bi-person-circle"></i> <span class="icon-text">Perfil</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/login">
+                <i class="bi bi-box-arrow-right"></i> <span class="icon-text">Cerrar sesión</span>
+              </a>
+          </li>
+        </ul>       
+        </div>
+    </nav>
+  </header>
+</div>
+<div id="content-container">
+<div id="content">
+      <form method="POST" action="/post/i" enctype="multipart/form-data" class="form">
+        <h1>Crear Publicación</h1>
+        <div class="mb-3">
+            <label for="titlePost" class="form-label">Titulo</label>
+            <input class="form-control" id="titlePost" name="titlePost" rows="3">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Descripción</label>
+            <textarea class="form-control" id="description" name="description"rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="category" class="form-label">Categoria</label>
+          <select class="form-select" name="category" aria-label="Default select example" required>
+              <option value="" selected>Elegir categoria</option>
+              <option value="musica">Música</option>
+              <option value="cine">Cine</option>
+          </select>
+        </div>
+        <div class="mb-3">
+            <label for="photoPost" class="form-label">Seleccionar Documentos</label>
+                <div class="input-group">
+                    <input type="file" class="form-control" id="photoPost" name="photoPost" accept="image/*"  aria-describedby="inputGroupFileAddon04" aria-label="Upload" required>
+        </div>
+        </div>
+        <button type="submit" class="btn btn-post">Publicar</button>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+        
+
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div>
+    <header>
+      <nav>
+        <div class="container-fluid">
+          <div class="row">
+          <div class="col-sm-3" id="sidebar">
+            <img src="../static/images/logo_soundtrack.png" class="logo-bar">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link"  href="/feed">
+                  <i class="bi bi-house-door-fill"></i> <span class="icon-text">Inicio</span>
+                </a>
+            </li>
+            <li class="nav-item active" aria-current="page">
+              <a class="nav-link" href="/post">
+                <i class="bi bi-plus-circle-fill"></i> <span class="icon-text">Crear</span>
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/profile">
+                  <i class="bi bi-person-circle"></i> <span class="icon-text">Perfil</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">
+                  <i class="bi bi-box-arrow-right"></i> <span class="icon-text">Cerrar sesión</span>
+                </a>
+            </li>
+          </ul>       
+          </div>
+      </nav>
+    </header>
+  </div>
+  
+    <div class="col-sm-9 offset-sm-3">
+      <div class="row">
+          <!-- Publicación -->
+          <div class="col-md-6">
+              <div class="card mb-3">
+                  <div class="card-header">
+                      {{ post.nickname }}
+                  </div>
+                  <a href="{{ url_for('detailsPost', idPost=post.idPost) }}">
+                      <img src="{{ url_for('uploaded_file', filename=post.photopost.split('/')[-1]) }}" class="card-img-top" alt="...">
+                  </a>
+                  <div class="card-body">
+                      <h5 class="card-title">{{ post.titlePost }}</h5>
+                      <p class="card-text">{{ post.description }}</p>
+                      <p class="card-text">{{ post.category }}</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Comentarios -->
+          <div class="col-md-6">
+              <div class="card mb-3">
+                  <div class="card-body">
+                      <h3 class="card-title">Comentarios</h3>
+                      <br>
+                      {% for comment in comments %}
+                      <div class="media mb-3">
+                          <img src="../static/images/user.png " class="comment-profile" alt="...">
+                          <div class="media-body">
+                              <h5 class="mt-0">{{ comment.nickname }}</h5>
+                              <p>{{ comment.content }}</p>
+                          </div>
+                      </div>
+                      {% endfor %}
+                      <form method="POST" action="{{ url_for('detailsPost', idPost=post.idPost) }}">
+                          <div class="form-group">
+                              <textarea class="form-control" name="content" placeholder="Agregar un comentario"></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-login">Comentar</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+{% endblock %}
+        
+

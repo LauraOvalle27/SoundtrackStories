@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea; /* Fondo gris claro */
+}
+
+
+.login-box {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    width: 100%;
+}
+
+.logo-login {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 100px; /* Tamaño máximo del logo */
+}
+
+.login-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    background-color:  #700101; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.password {
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+.password .recover:hover {
+    text-decoration: underline;
+}
+
+.logo-login {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 400px; /* Tamaño del logo */
+    height: auto;
+}
+
+
+#column1{
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    position: static;
+    width: 100%;
+}
+
+#column2{
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;    /* Centrado vertical */
+    height: 100%;      /* Asegura que el contenedor ocupe al menos la altura total del viewport */
+    padding: 20px;   
+    width: 100vh;
+}
+  
+.form {
+    width: 100%;             /* Asegura que el formulario ocupe todo el ancho disponible */
+    max-width: 800px;        /* Limita el ancho máximo del formulario */
+    background: #ffffff;     /* Fondo blanco para el formulario */
+    padding: 20px;           /* Espaciado interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra para un mejor efecto visual */
+    border-radius: 8px; 
+}
+
+#content {
+    margin-left: 270px;
+    padding: 20px;
+    margin-top: 80px;
+    height: 100vh;
+}
+
+#content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    justify-content: flex-start;
+    padding: 20px;
+    overflow-y: auto; 
+    height: 100vh;
+}
+
+.card{
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+#sidebar {
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+}
+
+#sidebar .nav-link {
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+}
+
+.logo-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Ajusta la altura del contenedor del logo según sea necesario */
+    width: 100%; 
+}
+
+
+#sidebar .nav-link .bi {
+    margin-right: 12px; /* Espacio entre el icono y el texto */
+    font-size: 20px; /* Tamaño del icono */
+}
+
+#sidebar .nav-link .icon-text {
+    display: inline-block; /* Mostrar en línea con el icono */
+}
+
+#sidebar .nav-link.active {
+    background-color: #f0f0f0; /* Fondo gris claro para el enlace activo */
+    font-weight: bold; /* Texto en negrita para el enlace activo */
+}
+
+                
+.btn-post{
+    background-color: #700101;
+    color:#ffffff;
+    width: 100%;
+}  
+
+.profile{
+    border-radius: 100%;
+    width: 30%;
+}               
+
+.comment-profile{
+    width: 10%;
+}
+
+.message{
+    text-align: center;
+    color: #700101;
+    font-size: 20px;
+    margin-top: 5px;
+}
